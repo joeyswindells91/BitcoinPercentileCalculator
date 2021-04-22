@@ -1,0 +1,47 @@
+.title {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.bitcoinFont {
+  font-family: 'Ubuntu', 'Lato', sans-serif;
+}
+
+.header img {
+  /* float: left; */
+  width: 80px;
+  height: 80px;
+  /* background: black; */
+}
+
+.header h2 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+
+#btcPrice {
+  margin-top: 2%;
+  display: inline;
+}
+
+.calculate {
+  margin-top: 3rem;
+};
+
+#middle {
+  padding-top: 40px;
+}
+
+.visibility {
+  visibility: hidden;
+  display: none;
+}
+
+#results {
+  font-size: 1.5rem;
+}
+
+.bold {
+  font-weight: bold;
+}
