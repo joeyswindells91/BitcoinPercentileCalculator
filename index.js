@@ -52,15 +52,15 @@ $(".calculate").click(function() {
   // $(".answer").html(ConvertToNumber($(".owned").val()) + ConvertToNumber($(".percentile").val()) * .01);
   $(".answer").html((circulation/(population * percentile)).toFixed(8));
 
-  $(".pop-result").html(population);
+  $(".pop-result").html(ConvertNumToCommas(population));
 
-  $(".circ-result").html(circulation);
+  $(".circ-result").html(ConvertNumToCommas(circulation));
 
   $(".top-percent").html((percentile * 100) + "%");
 
-  $(".bitcoin-price").html("$ " + currentBitcoinPrice.toFixed(2));
+  $(".bitcoin-price").html("$ " + ConvertNumToCommas(currentBitcoinPrice.toFixed(2)));
 
-  $(".amount-needed").html("$ " + (currentBitcoinPrice.toFixed(2) * (circulation/(population * percentile))).toFixed(2));
+  $(".amount-needed").html("$ " + ConvertNumToCommas((currentBitcoinPrice.toFixed(2) * (circulation/(population * percentile))).toFixed(2)));
 
   // var onepercent = currentBitcoinPrice.toFixed(2) * (circulation/(population * .01)).toFixed(2);
 
