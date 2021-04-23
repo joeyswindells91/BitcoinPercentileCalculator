@@ -16,6 +16,11 @@ function isNumber(input) {
   return input;
 }
 
+$("#meaningfuladopters").click(function() {
+
+  $("#population").val("2,200,000,000");
+});
+
 // end Convert String to Number Function
 
 // var population = $("#population").val();
