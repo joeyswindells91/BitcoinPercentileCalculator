@@ -25,6 +25,10 @@
   display: inline;
 }
 
+.close {
+  margin: 0 auto;
+}
+
 .calculate {
   margin-top: 3rem;
 };
