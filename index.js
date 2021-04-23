@@ -50,7 +50,7 @@ $(".calculate").click(function() {
 
 
   // $(".answer").html(ConvertToNumber($(".owned").val()) + ConvertToNumber($(".percentile").val()) * .01);
-  $(".answer").html((circulation/(population * percentile)).toFixed(8));
+  $(".answer").html((circulation/(population * percentile)).toFixed(4));
 
   $(".pop-result").html(ConvertNumToCommas(population));
 
@@ -66,7 +66,7 @@ $(".calculate").click(function() {
 
   $(".current-holding").html(bitcoinowned + " Bitcoins");
 
-  $(".personal-percent").html((((circulation/bitcoinowned) / population) * 100).toFixed(8) + " %");
+  $(".personal-percent").html((((circulation/bitcoinowned) / population) * 100).toFixed(3) + " %");
 
   if (!(bitcoinowned>0)) {
     // $("#noCoiner").removeClass("visibility");
@@ -150,20 +150,6 @@ function ConvertNumToCommas(result) {
   return result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
 };
-
-
-// // when population field changes,
-
-// $("#population").change(function () {
-
-// // the value of the populatiln field will be sent though the following function
-
-// var result = ConvertToNumber($("#population").val());
-// // the new value of the poplulation field is the result of that function
-
-// $("#population").val(ConvertNumToCommas(result));
-
-// });
 
 $(".commas").change(function () {
 
