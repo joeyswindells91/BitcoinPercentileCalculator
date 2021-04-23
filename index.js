@@ -144,3 +144,34 @@ function myFunction() {
 myFunction();
 
 // ************************************************************************ //
+
+function ConvertNumToCommas(result) {
+
+  return result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+};
+
+
+// // when population field changes,
+
+// $("#population").change(function () {
+
+// // the value of the populatiln field will be sent though the following function
+
+// var result = ConvertToNumber($("#population").val());
+// // the new value of the poplulation field is the result of that function
+
+// $("#population").val(ConvertNumToCommas(result));
+
+// });
+
+$(".commas").change(function () {
+
+  // the value of the populatiln field will be sent though the following function
+
+  var result = ConvertToNumber($(this).val());
+  // the new value of the poplulation field is the result of that function
+
+  $(this).val(ConvertNumToCommas(result));
+
+  });

@@ -35,10 +35,10 @@
     <div class="row">
       <div class="col-sm-8">
         <h3>Population</h3>
-        <input type="number" value="7500000000" id="population">
+        <input type="text" value="7,500,000,000" id="population" class="commas">
 
         <h3>Bitcoin In Circulation</h3>
-        <input type="number" value="21000000" class="circulation">
+        <input type="text" value="21,000,000" class="circulation commas">
 
         <h3>Number of Bitcoins you currently own</h3>
         <input type="number" class="owned">
@@ -77,13 +77,17 @@
     <p>Your current bitcoin holding of <span class="current-holding bold"></span> puts you in the top <span class="personal-percent bold"></span> of Bitcoin holders</p>
 
 
-    <p class="visibility text-primary" id="onetenthpercenter">Congratulations for being in the top <span class="bold">.1%</span>!</p>
+    <!-- <p class="visibility text-primary" id="onetenthpercenter">Congratulations for being in the top <span class="bold">.1%</span>!</p>
 
 
     <p class="visibility text-primary" id="onehundrethpercenter">Congratulations for being in the top <span class="bold">.01%</span>!</p>
 
     <p class="visibility text-primary" id="onepercenter">Congratulations for being in the top <span class="bold">1%</span> of Bitcoin holders! Satoshi would be very proud of you!</p>
-    <p class="visibility text-warning" id="tenpercenter">You're in the top <span class="bold">10%</span>!  You're doing great! Keep hodling and stacking sats!</p>
+
+
+    <p class="visibility text-warning" id="tenpercenter">You're in the top <span class="bold">10%</span>!  You're doing great! Keep hodling and stacking sats!</p> -->
+
+
     <img class="visibility" id="bullish" src="images/bullish.png" alt="Why We're Bullish">
 
     <img class="visibility" id="satoshi" src="images/satoshi.png" alt="Satoshi">
@@ -91,6 +95,16 @@
     <img class="visibility" id="richpic" src="images/saylor.png" alt=".1 percenter">
 
     <img class="visibility" id="superrichpic" src="images/washbitcoin.png" alt="Dollar Bitcoin">
+
+    <p class="visibility text-primary" id="onetenthpercenter">Congratulations for being in the top <span class="bold">.1%</span>!</p>
+
+
+    <p class="visibility text-primary" id="onehundrethpercenter">Congratulations for being in the top <span class="bold">.01%</span>!</p>
+
+    <p class="visibility text-primary" id="onepercenter">Congratulations for being in the top <span class="bold">1%</span> of Bitcoin holders! Satoshi would be very proud of you!</p>
+
+
+    <p class="visibility text-warning" id="tenpercenter">You're in the top <span class="bold">10%</span>!  You're doing great! Keep hodling and stacking sats!</p>
   </div>
 
   <div class="visibility" id="hfsp">
@@ -98,7 +112,6 @@
     <img class="rounded mx-auto d-block" src="images/schiff.png" alt="Bitcoin Peter Schiff">
   </div>
 
-  <video src="images/bitcoinvideo.mp4"></video>
 
 
   <!-- <p>Your current bitcoin holding of <h3 class="current-holding"></h3>
