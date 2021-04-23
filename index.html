@@ -34,18 +34,60 @@
   <div class="container text-center" id="middle" style="padding-top: 40px; padding-bottom: 40px;">
     <div class="row">
       <div class="col-sm-8">
-        <h3>Population</h3>
-        <input type="text" value="7,500,000,000" id="population" class="commas">
 
-        <h3>Bitcoin In Circulation</h3>
-        <input type="text" value="21,000,000" class="circulation commas">
+        <div>
+        <h3 class="d-inline">Population </h3>
+        <h5 class="d-inline text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">[?]</h5>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+              <h3>Working</h3>
+            </div>
+          </div>
+        </div>
 
-        <h3>Number of Bitcoins you currently own</h3>
-        <input type="number" class="owned">
+        <input type="text" value="7,500,000,000" id="population" class="commas mt-2">
+        </div>
 
+        <div class="mt-3">
+          <h3 class="d-inline">Bitcoin Supply </h3>
+          <h5 class="d-inline text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">[?]</h5>
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+              <div class="card card-body">
+                <h3>Working</h3>
+              </div>
+            </div>
+          </div>
 
-        <h3>Target Percentage of Bitcoin Owners (%)</h3>
-        <input type="number" value="1" class="percentile">
+          <input type="text" value="21,000,000" class="circulation commas mt-2">
+        </div>
+
+        <div class="mt-3">
+          <h3 class="d-inline">Number of Bitcoins you currently own </h3>
+          <h5 class="d-inline text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">[?]</h5>
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample3">
+              <div class="card card-body">
+                <h3>Working</h3>
+              </div>
+            </div>
+          </div>
+          <input type="number" class="owned mt-2">
+        </div>
+
+        <div class="mt-3">
+          <h3 class="d-inline">Target Percentage of Bitcoin Holders </h3>
+          <h5 class="d-inline text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">[?]</h5>
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample4">
+              <div class="card card-body">
+                <h3>Working</h3>
+              </div>
+            </div>
+          </div>
+          <input type="number" value="1" class="percentile mt-2">
+        </div>
 
         <br>
 
@@ -65,11 +107,17 @@
 <div class="row visibility mt-3" id="results" style="padding-top: 40px;">
   <div class="col">
 
-  <p>Based on a population of <span class="pop-result bold"></span> and a total of <span class="circ-result bold"></span> Bitcoins in circulation:</p>
+  <p class="text-secondary">Based on a population of <span class="pop-result bold"></span> and a total of <span class="circ-result bold"></span> Bitcoins in circulation:</p>
+
+  <hr>
 
   <p>You need <span class="answer bold"></span> Bitcoins to be in the top <span class="top-percent bold"></span> of Bitcoin holders</p>
 
+  <hr>
+
   <p>Based on the current bitcoin price of <span class="bitcoin-price bold"></span>, it would cost <span class="amount-needed bold"></span> to join the top <span class="top-percent bold"></span> today</p>
+
+  <hr>
 
 
 
@@ -148,5 +196,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- js link -->
 <script src="index.js" charset="utf-8"></script>
+
+   <!-- bootstrap js link -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
