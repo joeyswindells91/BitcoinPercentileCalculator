@@ -1,4 +1,5 @@
 var currentBitcoinPrice = 0;
+var currentbitcoinowned = 0;
 // Convert String to Number Function
 
 function ConvertToNumber(numberString) {
@@ -16,11 +17,53 @@ function isNumber(input) {
   return input;
 }
 
+$("#worldpop").click(function() {
+
+  $("#population").val("7,800,000,000");
+})
+
 $("#meaningfuladopters").click(function() {
 
   $("#population").val("2,200,000,000");
 });
 
+$("#currentadopters").click(function() {
+
+  $("#population").val("106,000,000");
+});
+
+
+$("#maxcap").click(function() {
+  $(".circulation").val("21,000,000");
+});
+
+$("#currentsupply").click(function() {
+  $(".circulation").val("18,700,000");
+})
+
+$("#lostsupply").click(function() {
+  $(".circulation").val("15,000,000");
+})
+
+
+
+
+
+$("#calculateshares").click(function() {
+  $("#totalbtc").html(function() {
+
+    var result = (ConvertToNumber($("#shares").val()) * ConvertToNumber($("#pershare").val())).toFixed(8);
+
+    currentbitcoinowned = result;
+
+   return result;
+
+  });
+});
+
+$("#copyamount").click(function() {
+  $(".owned").val(currentbitcoinowned);
+})
 // end Convert String to Number Function
 
 // var population = $("#population").val();
