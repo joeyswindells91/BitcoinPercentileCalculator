@@ -1,6 +1,6 @@
 .title {
   padding-top: 5%;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
 }
 
 .bitcoinFont {
@@ -18,6 +18,12 @@
   position: relative;
   top: 18px;
   left: 10px;
+}
+
+#heading-summary {
+  margin: 0 auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 #btcPrice {
