@@ -52,17 +52,20 @@ $("#lostsupply").click(function() {
 $("#calculateshares").click(function() {
   $("#totalbtc").html(function() {
 
-    var result = (ConvertToNumber($("#shares").val()) * ConvertToNumber($("#pershare").val())).toFixed(8);
+    var result = (ConvertToNumber($("#shares").val()) * ConvertToNumber($("#pershare").val())).toFixed(4);
 
-    currentbitcoinowned = result;
+    currentbitcoinowned = ConvertToNumber(result);
 
-   return result;
+   return result + " Bitcoin via GBTC";
 
   });
+
+  $("#addition-sign").removeClass("visibility");
+
 });
 
 $("#copyamount").click(function() {
-  $(".owned").val(currentbitcoinowned);
+  $(".owned").val(currentbitcoinowned + ConvertToNumber($("#real-btc").val()));
 })
 // end Convert String to Number Function
 
@@ -114,7 +117,7 @@ $(".calculate").click(function() {
 
   $(".current-holding").html(bitcoinowned + " Bitcoins");
 
-  $(".personal-percent").html((((circulation/bitcoinowned) / population) * 100).toFixed(3) + " %");
+  $(".personal-percent").html((((circulation/bitcoinowned) / population) * 100).toFixed(5) + " %");
 
   if (!(bitcoinowned>0)) {
     // $("#noCoiner").removeClass("visibility");
@@ -201,6 +204,7 @@ function ConvertNumToCommas(result) {
 
 $(".commas").change(function () {
 
+
   // the value of the populatiln field will be sent though the following function
 
   var result = ConvertToNumber($(this).val());
@@ -209,6 +213,40 @@ $(".commas").change(function () {
   $(this).val(ConvertNumToCommas(result));
 
   });
+
+
+
+
+
+  // edge cases
+
+  $(".circulation").change(function () {
+
+    if (ConvertToNumber($(".circulation").val()) > 21000000 || ConvertToNumber($(".circulation").val()) <= 0) {
+      $(".circulation").val("21,000,000");
+    }
+
+    // if (ConvertToNumber($(".circulation").val()) < 0) {
+    //   $(".circulation").val("0");
+    // }
+
+  })
+
+  $("#population").change(function() {
+    if(ConvertToNumber($("#population").val()) <= 0) {
+
+      $("#population").val("7,800,000,000");
+
+    }
+  })
+
+
+  $(".owned").change(function() {
+    if(ConvertToNumber($(".owned").val()) < 0 || ConvertToNumber($(".owned").val()) > 21000000 )
+
+    $(".owned").val("0");
+
+  })
 
   // Tip Bitcoin Wallet Address code
 

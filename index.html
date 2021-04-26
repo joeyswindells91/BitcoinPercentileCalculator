@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bitcoin Percentile Calculator</title>
+  <title>Bitcoin Ranking Calculator</title>
 
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
   <link rel="stylesheet" href="styles.css">
@@ -22,13 +22,13 @@
 
   <div class="container bg-dark text-center">
     <div class="row title">
-      <h1 class="display-3 text-warning bitcoinFont">Bitcoin Percentile Calculator</h1>
+      <h1 class="display-3 text-warning bitcoinFont">Bitcoin Ranking Calculator</h1>
       <div class="header mt-3">
         <img src="images/bitcoinicon.png" alt="bitcoin logo">
         <h2 id="btcPrice" class="text-warning bitcoinFont"></h2>
       </div>
       <div>
-        <p class="text-warning bitcoinFont mt-3" id="heading-summary">Use this calculator to determine where your bitcoin holdings stand compared to the rest of the bitcoin community.  There is a lot of debate surrounding bitcoin supply and the size of the addressable market.  Play around with different metrics to see where you stand.</p>
+        <p class="text-warning bitcoinFont mt-3" id="heading-summary">Use this calculator to determine where your bitcoin holdings stand compared to the rest of the bitcoin community.  There is a lot of debate surrounding bitcoin supply (due to lost coins) and the size of the addressable market.  Play around with different metrics to see where you stand.</p>
       </div>
     </div>
   </div>
@@ -88,11 +88,16 @@
                   <input type="number" id="shares">
                   <h5 class="mt-3">BTC Per Share</h5>
                   <input type="number" value="0.000944257" id="pershare">
+                  <hr>
                   <button class="btn btn-dark mt-3 mb-3 d-block center" id="calculateshares">Calculate</button>
                   <h5 id="totalbtc"></h5>
-                  <button class="btn btn-primary mt-2 d-block center" id="copyamount">Copy to Bitcoins Owned field</button>
+                  <h5 class="visibility" id="addition-sign">+</h5>
+                  <h5 class="mt-3">Actual Bitcoin</h5>
+                  <input type="number" id="real-btc">
+                  <button class="btn btn-primary mt-3 d-block center" id="copyamount">Copy Total Bitcoins to Owned field</button>
                   <button class="btn btn-dark text-light d-inline center mt-3 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Close</button>
                 </div>
+
               </div>
             </div>
           </div>
